@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/equationText"
+            android:layout_height="25pt"
+            android:gravity="right"
+            android:hint="@string/result_default"
+            android:maxLength="13"
+            android:maxLines="5"
+            android:padding="4pt"
+            android:textSize="14pt" />
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_height="25pt"
+            android:gravity="right"
+            android:hint="@string/result_default"
+            android:maxLength="20"
+            android:padding="4pt"
+
+            android:textSize="14pt" />
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
+
+        <TableRow
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5pt"
+            android:paddingLeft="4pt"
+            android:paddingRight="4pt">
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/button_background"
+                android:text="@string/buttonSeven"
+                android:textSize="14pt" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/button_background"
+
+                android:text="@string/buttonEight"
+                android:textSize="14pt" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+
+                android:text="@string/buttonNine"
+                android:textSize="14pt" />
+
+            <Button
+                android:id="@+id/buttonDivide"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+
+                android:text="@string/buttonDivide"
+                android:textSize="14pt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1pt"
+
+            android:paddingLeft="4pt"
+            android:paddingRight="4pt">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+
+                android:text="@string/buttonFour"
+                android:textSize="14pt" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+
+                android:text="@string/buttonFive"
+                android:textSize="14pt" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+
+                android:text="@string/buttonSix"
+                android:textSize="14pt" />
+
+            <Button
+                android:id="@+id/buttonMultiply"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+
+
+                android:text="@string/buttonMutiply"
+                android:textSize="14pt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1pt"
+            android:paddingLeft="4pt"
+            android:paddingRight="4pt">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+
+
+                android:text="@string/buttonOne"
+                android:textSize="14pt" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+
+                android:text="@string/buttonTwo"
+                android:textSize="14pt" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+
+                android:text="@string/buttonThree"
+                android:textSize="14pt" />
+
+            <Button
+                android:id="@+id/buttonMinus"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+
+                android:text="@string/buttonMinus"
+                android:textSize="14pt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1pt"
+            android:paddingLeft="4pt"
+            android:paddingRight="4pt">
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/button_background"
+
+                android:text="@string/buttonClear"
+                android:textSize="14pt" />
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+
+
+                android:text="@string/buttonZero"
+                android:textSize="14pt" />
+
+            <Button
+                android:id="@+id/buttonResult"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/button_background"
+
+                android:text="@string/buttonResult"
+                android:textSize="14pt" />
+
+            <Button
+                android:id="@+id/buttonPlus"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/button_background"
+                android:text="@string/buttonPlus"
+                android:textSize="14pt" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
