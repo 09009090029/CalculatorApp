@@ -80,7 +80,7 @@
                 android:textSize="14pt" />
 
             <Button
-                android:id="@+id/buttonDivide"
+
                 android:layout_width="25pt"
                 android:layout_height="25pt"
                 android:layout_margin="4dp"
@@ -133,7 +133,7 @@
                 android:textSize="14pt" />
 
             <Button
-                android:id="@+id/buttonMultiply"
+
                 android:layout_width="25pt"
                 android:layout_height="25pt"
                 android:layout_margin="4dp"
@@ -187,7 +187,7 @@
                 android:textSize="14pt" />
 
             <Button
-                android:id="@+id/buttonMinus"
+
                 android:layout_width="25pt"
                 android:layout_height="25pt"
                 android:layout_margin="4dp"

@@ -13,10 +13,7 @@ import java.util.HashSet;
 
 public class HomeActivity extends AppCompatActivity {
     private static String LOGGING_TAG = "HomeActivity";
-    private int firstNumber = -1;
-    private int secoundNumber = -1;
     private String operator = null;
-    private int answer = 0;
     private Button button0;
     private Button button1;
     private Button button2;
@@ -29,9 +26,6 @@ public class HomeActivity extends AppCompatActivity {
     private Button button9;
     private Button buttonPlus;
     private Button buttonClear;
-    private Button buttonMinus;
-    private Button buttonMultiply;
-    private Button buttonDivide;
     private Button buttonResult;
     private TextView result;
     private TextView equationTextView;
@@ -55,9 +49,7 @@ public class HomeActivity extends AppCompatActivity {
         buttonResult = findViewById(R.id.buttonResult);
         equationTextView = findViewById(R.id.equationText);
         buttonClear = findViewById(R.id.buttonClear);
-        buttonMinus = findViewById(R.id.buttonMinus);
-        buttonMultiply = findViewById(R.id.buttonMultiply);
-        buttonDivide = findViewById(R.id.buttonDivide);
+
         buttonPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -143,12 +135,9 @@ public class HomeActivity extends AppCompatActivity {
 
     private void sum() {
         Log.d(LOGGING_TAG, "sum ()");
-        if (operator != null) {
-            Toast.makeText(getApplicationContext(), "Multiple operator not allow", Toast.LENGTH_SHORT).show();
-        } else {
-            operator = AppConstant.ADD_OPRATOR;
-            buildEquation(operator);
-        }
+
+        operator = AppConstant.ADD_OPRATOR;
+        buildEquation(operator);
 
 
     }
@@ -160,6 +149,7 @@ public class HomeActivity extends AppCompatActivity {
         result.setText("" + answer);
         equationTextView.setText("");
         operator = null;
+
     }
 
     private void clickNumber(int number) {
@@ -174,30 +164,10 @@ public class HomeActivity extends AppCompatActivity {
         equationTextView.setText(currentEquation);
     }
 
-//    private void cutOperation() {
-//        Log.d(LOGGING_TAG, "cutOperation");
-//        equationTextView.setText("");
-//        operator = null;
-//    }
-
     private void cutOperation() {
-        Log.d(LOGGING_TAG, "cutOperation2");
-        String currentEquation = equationTextView.getText().toString();
-        int equationLength = currentEquation.length();
-        if (equationLength > 0) {
-            char lastChar = currentEquation.charAt(equationLength - 1);
-            if (lastChar == '+' || lastChar == '-' || lastChar == '/' || lastChar == '*') {
-                Log.d(LOGGING_TAG, "operator delete");
-                operator = null;
-            }
-            String remaningString = "";
-            if (equationLength > 1) {
-                remaningString = currentEquation.substring(0, equationLength - 1);
-                Log.d(LOGGING_TAG, "remaningString = " + remaningString);
-            }
-            equationTextView.setText(remaningString);
-
-        }
+        Log.d(LOGGING_TAG, "cutOperation");
+        equationTextView.setText("");
+        operator = null;
     }
 
 
@@ -206,36 +176,20 @@ public class HomeActivity extends AppCompatActivity {
         String currentEquation = equationTextView.getText().toString();
         Log.d(LOGGING_TAG, "currentEquation = " + currentEquation);
         int answer = 0;
-        if (operator != null) {
 
-            String[] numbers = currentEquation.split(String.format("\\%s", operator));
-            Log.d(LOGGING_TAG, "numbers = " + numbers);
-            if (numbers.length == 2) {
-                int number1 = Integer.parseInt(numbers[0]);
-                int number2 = Integer.parseInt(numbers[1]);
-                Log.d(LOGGING_TAG, "number1 = " + number1);
-                Log.d(LOGGING_TAG, "number2 = " + number2);
-                switch (operator) {
-                    case AppConstant.ADD_OPRATOR:
-                        answer = number1 + number2;
-                        break;
-                    default:
-                        answer = 0;
-                        Toast.makeText(getApplicationContext(), "operator is not valid", Toast.LENGTH_SHORT).show();
-                }
-
-            } else {
-                Toast.makeText(getApplicationContext(), "Input not right", Toast.LENGTH_SHORT).show();
-            }
-
-        } else {
-            Toast.makeText(getApplicationContext(), "Please enter any operator", Toast.LENGTH_SHORT).show();
+        String[] numbers = currentEquation.split(String.format("\\%s", operator));
+        Log.d(LOGGING_TAG, "numbers = " + numbers);
+        int number1 = Integer.parseInt(numbers[0]);
+        int number2 = Integer.parseInt(numbers[1]);
+        Log.d(LOGGING_TAG, "number1 = " + number1);
+        Log.d(LOGGING_TAG, "number2 = " + number2);
+        switch (operator) {
+            case AppConstant.ADD_OPRATOR:
+                answer = number1 + number2;
+                break;
         }
+
         return answer;
+
     }
-
-
-    // make method of find the data
-    // make has map
-    //
 }
