@@ -11,6 +11,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+/**
+ * Delta Labs Workshop
+ */
 public class HomeActivity extends AppCompatActivity {
     private static String LOGGING_TAG = "HomeActivity";
     private String operator = null;
@@ -137,11 +140,17 @@ public class HomeActivity extends AppCompatActivity {
 //
 //    }
 
+    /**
+     * @param number that will be click
+     */
     private void clickNumber(int number) {
         Log.d(LOGGING_TAG, "clickNumber number = " + number);
         buildEquation("" + number);
     }
 
+    /**
+     * @param equationValue string add in the equationValue
+     */
     private void buildEquation(String equationValue) {
         String currentEquation = equationTextView.getText().toString();
         Log.d(LOGGING_TAG, "currentEquation = " + currentEquation);
