@@ -50,12 +50,7 @@ public class HomeActivity extends AppCompatActivity {
         equationTextView = findViewById(R.id.equationText);
         buttonClear = findViewById(R.id.buttonClear);
 
-        buttonPlus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sum();
-            }
-        });
+
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,46 +106,36 @@ public class HomeActivity extends AppCompatActivity {
                 clickNumber(8);
             }
         });
+
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickNumber(9);
             }
         });
-        buttonResult.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                equalButton();
-            }
-        });
-        buttonClear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                cutOperation();
-            }
-        });
-
-    }
-
-
-    private void sum() {
-        Log.d(LOGGING_TAG, "sum ()");
-
-        operator = AppConstant.ADD_OPRATOR;
-        buildEquation(operator);
 
 
     }
 
 
-    private void equalButton() {
-        Log.d(LOGGING_TAG, "equalButton");
-        int answer = calculateResult();
-        result.setText("" + answer);
-        equationTextView.setText("");
-        operator = null;
+//    private void sum() {
+//        Log.d(LOGGING_TAG, "sum ()");
+//
+//        operator = AppConstant.ADD_OPRATOR;
+//        buildEquation(operator);
+//
+//
+//    }
 
-    }
+//
+//    private void equalButton() {
+//        Log.d(LOGGING_TAG, "equalButton");
+//        int answer = calculateResult();
+//        result.setText("" + answer);
+//        equationTextView.setText("");
+//        operator = null;
+//
+//    }
 
     private void clickNumber(int number) {
         Log.d(LOGGING_TAG, "clickNumber number = " + number);
@@ -163,33 +148,33 @@ public class HomeActivity extends AppCompatActivity {
         currentEquation = currentEquation + "" + equationValue;
         equationTextView.setText(currentEquation);
     }
+//
+//    private void cutOperation() {
+//        Log.d(LOGGING_TAG, "cutOperation");
+//        equationTextView.setText("");
+//        operator = null;
+//    }
+//
 
-    private void cutOperation() {
-        Log.d(LOGGING_TAG, "cutOperation");
-        equationTextView.setText("");
-        operator = null;
-    }
-
-
-    private int calculateResult() {
-        Log.d(LOGGING_TAG, "calculateResult");
-        String currentEquation = equationTextView.getText().toString();
-        Log.d(LOGGING_TAG, "currentEquation = " + currentEquation);
-        int answer = 0;
-
-        String[] numbers = currentEquation.split(String.format("\\%s", operator));
-        Log.d(LOGGING_TAG, "numbers = " + numbers);
-        int number1 = Integer.parseInt(numbers[0]);
-        int number2 = Integer.parseInt(numbers[1]);
-        Log.d(LOGGING_TAG, "number1 = " + number1);
-        Log.d(LOGGING_TAG, "number2 = " + number2);
-        switch (operator) {
-            case AppConstant.ADD_OPRATOR:
-                answer = number1 + number2;
-                break;
-        }
-
-        return answer;
-
-    }
+//    private int calculateResult() {
+//        Log.d(LOGGING_TAG, "calculateResult");
+//        String currentEquation = equationTextView.getText().toString();
+//        Log.d(LOGGING_TAG, "currentEquation = " + currentEquation);
+//        int answer = 0;
+//
+//        String[] numbers = currentEquation.split(String.format("\\%s", operator));
+//        Log.d(LOGGING_TAG, "numbers = " + numbers);
+//        int number1 = Integer.parseInt(numbers[0]);
+//        int number2 = Integer.parseInt(numbers[1]);
+//        Log.d(LOGGING_TAG, "number1 = " + number1);
+//        Log.d(LOGGING_TAG, "number2 = " + number2);
+//        switch (operator) {
+//            case AppConstant.ADD_OPRATOR:
+//                answer = number1 + number2;
+//                break;
+//        }
+//
+//        return answer;
+//
+//    }
 }

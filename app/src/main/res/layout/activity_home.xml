@@ -79,16 +79,16 @@
                 android:text="@string/buttonNine"
                 android:textSize="14pt" />
 
-            <Button
+            <!--<Button-->
 
-                android:layout_width="25pt"
-                android:layout_height="25pt"
-                android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_background"
+            <!--android:layout_width="25pt"-->
+            <!--android:layout_height="25pt"-->
+            <!--android:layout_margin="4dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/button_background"-->
 
-                android:text="@string/buttonDivide"
-                android:textSize="14pt" />
+            <!--android:text="@string/buttonDivide"-->
+            <!--android:textSize="14pt" />-->
         </TableRow>
 
         <TableRow
@@ -132,17 +132,17 @@
                 android:text="@string/buttonSix"
                 android:textSize="14pt" />
 
-            <Button
+            <!--<Button-->
 
-                android:layout_width="25pt"
-                android:layout_height="25pt"
-                android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_background"
+            <!--android:layout_width="25pt"-->
+            <!--android:layout_height="25pt"-->
+            <!--android:layout_margin="4dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/button_background"-->
 
 
-                android:text="@string/buttonMutiply"
-                android:textSize="14pt" />
+            <!--android:text="@string/buttonMutiply"-->
+            <!--android:textSize="14pt" />-->
         </TableRow>
 
         <TableRow
@@ -186,16 +186,16 @@
                 android:text="@string/buttonThree"
                 android:textSize="14pt" />
 
-            <Button
+            <!--<Button-->
 
-                android:layout_width="25pt"
-                android:layout_height="25pt"
-                android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_background"
+            <!--android:layout_width="25pt"-->
+            <!--android:layout_height="25pt"-->
+            <!--android:layout_margin="4dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/button_background"-->
 
-                android:text="@string/buttonMinus"
-                android:textSize="14pt" />
+            <!--android:text="@string/buttonMinus"-->
+            <!--android:textSize="14pt" />-->
         </TableRow>
 
         <TableRow
@@ -241,16 +241,16 @@
                 android:text="@string/buttonResult"
                 android:textSize="14pt" />
 
-            <Button
-                android:id="@+id/buttonPlus"
-                android:layout_width="25pt"
-                android:layout_height="25pt"
-                android:layout_margin="4dp"
-                android:layout_weight="1"
+            <!--<Button-->
+            <!--android:id="@+id/buttonPlus"-->
+            <!--android:layout_width="25pt"-->
+            <!--android:layout_height="25pt"-->
+            <!--android:layout_margin="4dp"-->
+            <!--android:layout_weight="1"-->
 
-                android:background="@drawable/button_background"
-                android:text="@string/buttonPlus"
-                android:textSize="14pt" />
+            <!--android:background="@drawable/button_background"-->
+            <!--android:text="@string/buttonPlus"-->
+            <!--android:textSize="14pt" />-->
         </TableRow>
     </TableLayout>
 </LinearLayout>
