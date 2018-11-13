@@ -1,15 +1,11 @@
 package com.deltalabs.calculatorapp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.HashSet;
 
 /**
  * Delta Labs Workshop
@@ -47,12 +43,14 @@ public class HomeActivity extends AppCompatActivity {
         button7 = findViewById(R.id.button7);
         button8 = findViewById(R.id.button8);
         button9 = findViewById(R.id.button9);
-        buttonPlus = findViewById(R.id.buttonPlus);
-        result = findViewById(R.id.result);
-        buttonResult = findViewById(R.id.buttonResult);
         equationTextView = findViewById(R.id.equationText);
-        buttonClear = findViewById(R.id.buttonClear);
+        
 
+        //buttonClear = findViewById(R.id.buttonClear);
+        //buttonPlus = findViewById(R.id.buttonPlus);
+
+        //result = findViewById(R.id.result);
+        // buttonResult = findViewById(R.id.buttonResult);
 
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
