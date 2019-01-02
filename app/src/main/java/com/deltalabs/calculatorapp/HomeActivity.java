@@ -44,7 +44,7 @@ public class HomeActivity extends AppCompatActivity {
         button8 = findViewById(R.id.button8);
         button9 = findViewById(R.id.button9);
         equationTextView = findViewById(R.id.equationText);
-        
+
 
         //buttonClear = findViewById(R.id.buttonClear);
         //buttonPlus = findViewById(R.id.buttonPlus);
