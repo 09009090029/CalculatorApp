@@ -24,13 +24,12 @@
             android:background="#FF909090" />
 
         <TextView
-            android:id="@+id/result"
+            android:id="@+id/resultTextView"
             android:layout_height="25pt"
             android:gravity="right"
             android:hint="@string/result_default"
             android:maxLength="20"
             android:padding="4pt"
-
             android:textSize="14pt" />
 
         <View
@@ -51,10 +50,10 @@
                 android:layout_height="25pt"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-
                 android:background="@drawable/button_background"
                 android:text="@string/buttonSeven"
                 android:textSize="14pt" />
+
 
             <Button
                 android:id="@+id/button8"
@@ -78,6 +77,7 @@
 
                 android:text="@string/buttonNine"
                 android:textSize="14pt" />
+
 
             <!--<Button-->
 
@@ -222,20 +222,16 @@
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_background"
-
-
                 android:text="@string/buttonZero"
                 android:textSize="14pt" />
 
             <Button
-                android:id="@+id/buttonResult"
+                android:id="@+id/buttonEqual"
                 android:layout_width="25pt"
                 android:layout_height="25pt"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-
                 android:background="@drawable/button_background"
-
                 android:text="@string/buttonResult"
                 android:textSize="14pt" />
 

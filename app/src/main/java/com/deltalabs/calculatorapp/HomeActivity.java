@@ -23,10 +23,8 @@ public class HomeActivity extends AppCompatActivity {
     private Button button7;
     private Button button8;
     private Button button9;
-    private Button buttonPlus;
     private Button buttonClear;
-    private Button buttonResult;
-    private TextView result;
+    private TextView resultTextView;
     private TextView equationTextView;
 
     @Override
@@ -43,15 +41,9 @@ public class HomeActivity extends AppCompatActivity {
         button7 = findViewById(R.id.button7);
         button8 = findViewById(R.id.button8);
         button9 = findViewById(R.id.button9);
+        buttonClear = findViewById(R.id.buttonClear);
         equationTextView = findViewById(R.id.equationText);
-
-
-        //buttonClear = findViewById(R.id.buttonClear);
-        //buttonPlus = findViewById(R.id.buttonPlus);
-
-        //result = findViewById(R.id.result);
-        // buttonResult = findViewById(R.id.buttonResult);
-
+        resultTextView = findViewById(R.id.resultTextView);
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,7 +99,6 @@ public class HomeActivity extends AppCompatActivity {
                 clickNumber(8);
             }
         });
-
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,6 +106,12 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        buttonClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cutOperation();
+            }
+        });
 
     }
 
@@ -124,19 +121,17 @@ public class HomeActivity extends AppCompatActivity {
 //
 //        operator = AppConstant.ADD_OPRATOR;
 //        buildEquation(operator);
-//
-//
 //    }
 
-//
-//    private void equalButton() {
-//        Log.d(LOGGING_TAG, "equalButton");
-//        int answer = calculateResult();
-//        result.setText("" + answer);
-//        equationTextView.setText("");
-//        operator = null;
-//
-//    }
+
+    private void equalButton() {
+        Log.d(LOGGING_TAG, "equalButton");
+        int answer = calculateResult();
+        resultTextView.setText("" + answer);
+        equationTextView.setText("");
+        operator = null;
+
+    }
 
     /**
      * @param number that will be click
@@ -155,33 +150,43 @@ public class HomeActivity extends AppCompatActivity {
         currentEquation = currentEquation + "" + equationValue;
         equationTextView.setText(currentEquation);
     }
-//
-//    private void cutOperation() {
-//        Log.d(LOGGING_TAG, "cutOperation");
-//        equationTextView.setText("");
-//        operator = null;
-//    }
-//
 
-//    private int calculateResult() {
-//        Log.d(LOGGING_TAG, "calculateResult");
-//        String currentEquation = equationTextView.getText().toString();
-//        Log.d(LOGGING_TAG, "currentEquation = " + currentEquation);
-//        int answer = 0;
-//
-//        String[] numbers = currentEquation.split(String.format("\\%s", operator));
-//        Log.d(LOGGING_TAG, "numbers = " + numbers);
-//        int number1 = Integer.parseInt(numbers[0]);
-//        int number2 = Integer.parseInt(numbers[1]);
-//        Log.d(LOGGING_TAG, "number1 = " + number1);
-//        Log.d(LOGGING_TAG, "number2 = " + number2);
-//        switch (operator) {
-//            case AppConstant.ADD_OPRATOR:
-//                answer = number1 + number2;
-//                break;
-//        }
-//
-//        return answer;
-//
-//    }
+    private void cutOperation() {
+        Log.d(LOGGING_TAG, "cutOperation");
+        equationTextView.setText("");
+        operator = null;
+    }
+
+    private int calculateResult() {
+        Log.d(LOGGING_TAG, "calculateResult");
+        String currentEquation = equationTextView.getText().toString();
+        Log.d(LOGGING_TAG, "currentEquation = " + currentEquation);
+        int answer = 0;
+
+        String[] numbers = currentEquation.split(String.format("\\%s", operator));
+        Log.d(LOGGING_TAG, "numbers = " + numbers);
+        int number1 = Integer.parseInt(numbers[0]);
+        int number2 = Integer.parseInt(numbers[1]);
+        Log.d(LOGGING_TAG, "number1 = " + number1);
+        Log.d(LOGGING_TAG, "number2 = " + number2);
+        switch (operator) {
+            case AppConstant.ADD_OPRATOR:
+                //answer = number1 + number2;
+                break;
+            case AppConstant.SUBTRACT_OPRATOR:
+                //answer = number1 + number2;
+                break;
+            case AppConstant.MULTIPLY_OPRATOR:
+                //answer = number1 + number2;
+                break;
+            case AppConstant.DIVIDE_OPRATOR:
+                //answer = number1 + number2;
+                break;
+
+        }
+
+        return answer;
+
+    }
+
 }
